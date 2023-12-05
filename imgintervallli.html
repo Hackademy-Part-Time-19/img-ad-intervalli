@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburguer ad interval</title>
+</head>
+
+<body style="background-color: gray;">
+
+    <div style="height: 110vh;display: flex;">
+
+        <div
+            style="display: flex;justify-content: center;flex: 1; background-color: black;border-top-left-radius:20px ; ">
+
+            <h1 style="font-size: 50px;margin-left: 20px;margin-top: 10px;color: white;">How to do without it ?</h1>
+
+
+
+        </div>
+
+        <div
+            style="display: flex; align-items: center;justify-content: center;flex: 3;border-top-right-radius:20px ; background-color:black;">
+
+            <img id="imgcover" src="./hamburger e patatine.jpg" alt=""
+                style="height: 100%;border-top-right-radius:20px ;object-fit: cover;transition: 1s opacity; ">
+
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <script>
+
+        let indiceimg = 2
+
+        setInterval(() => {
+
+
+            if (indiceimg == 1) {
+                document.getElementById("imgcover").style.opacity = "0",
+
+                    setTimeout(() => {
+                        document.getElementById("imgcover").src = "./hamburger e patatine.jpg",
+                            document.getElementById("imgcover").style.opacity = "1";
+
+                    }, 500);
+                indiceimg++;
+            } else if (indiceimg == 2) {
+                document.getElementById("imgcover").style.opacity = "0",
+
+                    setTimeout(() => {
+                        document.getElementById("imgcover").src = "./hamburger grill.jpg",
+                            document.getElementById("imgcover").style.opacity = "1";
+
+                    }, 500);
+                indiceimg++;
+            } else if (indiceimg == 3) {
+                document.getElementById("imgcover").style.opacity = "0",
+
+                    setTimeout(() => {
+                        document.getElementById("imgcover").src = "./doppio hamburger.jpg",
+                            document.getElementById("imgcover").style.opacity = "1";
+
+                    }, 500);
+                indiceimg = 1;
+
+            }
+        }, 3000);
+
+
+    </script>
+
+</body>
+
+</html>
